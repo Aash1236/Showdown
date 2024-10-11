@@ -2,6 +2,13 @@
     font-family: neue;
     src: url(./NeueHaasDisplayMediu.ttf);
 }
+
+@font-face {
+    font-family: neue;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
 * {
     font-family: neue;
 	margin: 0;
@@ -164,5 +171,119 @@ nav {
 
     to {
         transform: translate(-20%, 30%);
+    }
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+    position: relative;
+
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation: move 10s linear infinite;
+}
+#moving-text h1 {
+    font-size: 9vw;
+    display: inline-block;
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #EFEAE3; */
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+}
+
+#bottom-part2{
+    width: 20%;
+    
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+#bottom-part2 p{
+    font-weight: 100;
+    margin-top: 2vw;
+
+}
+
+#page2 #gooy{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient( to top right,#FE320A, #fe630a);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooy;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+@keyframes gooy {
+    from{
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
     }
 }

@@ -1,0 +1,23 @@
+--- destructure ---
+1. Navbar
+e1 - image
+e2 - a tags - work/studio/contact
+
+2. landing page div
+flex
+left and right parts - align items bottom
+
+3. orange smoke effect
+
+4. video
+
+5. continues text
+
+6. div
+
+7. projects
+
+8 . div
+
+9. swiper cards
+

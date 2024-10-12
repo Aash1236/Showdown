@@ -349,14 +349,154 @@ nav {
 
 .project-title {
     padding-left: 2%;
+    color: rgb(27, 27, 27);
+    padding-bottom: 5vh;
+    font-size: large;
+    font-weight: 200;
 }
 
+.project-title img{
+    height: 1vh;
+}
+
+
+
+.project{
+    height: 10vw;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: center;
+    padding-left: 5vh;
+}
+
+.project h4 {
+    padding: 10px 20px;
+    border: 1px solid #6666669f;
+    border-radius: 50px;
+    font-weight: 500;
+    position: relative;
+    color: #000000ce;
+    transition: all ease 0.4s;
+    font: 18px;
+    overflow: hidden;
+}
+
+.project h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+.project h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.project h4 a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+.project h4:hover a{
+    color: white;
+}
+
+.card-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 5vh;
+    box-sizing: border-box;
+    background-color: #EFEAE3;
+    font-family: neue;
+  }
+  .wrapper-container{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    border-radius: 30px;
+  }
+
+  .left-part {
+    width: 30%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 10vh; 
+    padding: 0;
+  }
+  
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    
+    height: 70%;
+  }
+  
+  .left-part a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 6vh;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .left-part p {
+    margin-top: 20px;
+    /* font-size: 1.2em; */
+    font-weight: 100;
+    color: white;
+  }
+  
+  .right-part {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .right-part img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  
 #page4{
     height: 70vh;
     width: 100%;
     background-color: #EFEAE3;
     padding: 10vw 2vw;
 }
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    padding: 0 2vw;
+    border-left: 0.5px solid #686868ce;
+    width: 30%;
+    
+  }
+
+  .swiper-slide p {
+    font-weight: 100;
+  }
+
+ 
+
+
 
 #page5{
     height: 100vh;
@@ -369,7 +509,7 @@ nav {
     width: 100%;
     position: fixed;
     z-index: 9;
-    background-color: black;
+    background-color: orangered;
     color: white;
     bottom: 0;
     display: flex;
@@ -386,38 +526,64 @@ nav {
 #footer-div {
     height: 20vh;
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw;
+    
+}
+
+#heading h3 {
+    font-size: 2vw;
+}
+
+#email p {
+    font-size: 1.5vw;
+    font-weight: 100;
 }
 
 #footer-bottom{
     border-top: 1px solid #dadada;
     height: 10vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
+#footer-gooye {
+    position: relative;
+}
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 1px solid #0000002a;
-  }
+#footer-gooye #gooye {
+    height: 150vw;
+    width: 1000vh;
+    position: absolute;
+    border-radius: 20%;
+    background: black;
+    bottom: 100;
+    right: 0;
+    filter: blur(20px);
+    animation-name: gooye;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    z-index: -1; /* Send it to the back */
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+@keyframes gooye {
+    from {
+        transform: translate(0%, 0%); /* Start from the bottom left corner */
+    }
+    to {
+        transform: translate(50vw, -50vh); /* Move to the center of the div */
+        filter: blur(30px); /* Increase blur */
+    }
+}
 
-  .swiper-slide {
-    width: 30%;
-  }
+
+
 
   

@@ -32,15 +32,52 @@ function page4Animation() {
     })
 }
 
+page4Animation()
 
-function swiperAnimation() {
-    var swiper = new swiper(".mySwiper", {
+
+// document.querySelectorAll('.left-part a').forEach(function(anchor) {
+//     anchor.addEventListener('click', function(event) {
+//       event.preventDefault(); // Prevent default anchor behavior
+  
+//       // Get the data-image attribute from the clicked anchor
+//       var newImage = this.getAttribute('data-image');
+  
+//       // Set the src of the right-part image
+//       document.getElementById('display-image').setAttribute('src', newImage);
+//     });
+//   });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var defaultImage = document.querySelector('.left-part a').getAttribute('data-image');
+    
+    // Set the default image on page load
+    document.getElementById('display-image').setAttribute('src', defaultImage);
+  
+    // Add click event listeners to all anchor tags
+    document.querySelectorAll('.left-part a').forEach(function(anchor) {
+      anchor.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+  
+        // Get the data-image attribute from the clicked anchor
+        var newImage = this.getAttribute('data-image');
+  
+        // Set the src of the right-part image
+        document.getElementById('display-image').setAttribute('src', newImage);
+      });
+    });
+  });
+  
+  
+
+function swiperAnimation(){
+    var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         centeredSlides: true,
         spaceBetween: 100,
-        
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
       });
 }
-
 swiperAnimation()
-page4Animation()

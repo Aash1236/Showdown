@@ -9,6 +9,12 @@
     src: url(./NeueHaasDisplayLight.ttf);
 }
 
+#div{
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
+}
+
 * {
     font-family: neue;
 	margin: 0;
@@ -30,6 +36,8 @@ nav {
     background-color: #EFEAE3;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 100;
     justify-content: space-between;
 }
 
@@ -272,9 +280,10 @@ nav {
 }
 
 #page3{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
+    padding: 4vw 0;
 }
 
 @keyframes gooy {
@@ -287,3 +296,128 @@ nav {
         transform: translate(-10%, 10%) skew(-12deg);
     }
 }
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+    border-bottom: 1px solid #38383864;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+										
+										 
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-title {
+    padding-left: 2%;
+}
+
+#page4{
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 10vw 2vw;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    /* background-color: black; */
+}
+
+#footer {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1{
+    font-size: 23vw;
+}
+
+#footer-div {
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+
+#footer-bottom{
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #0000002a;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 30%;
+  }
+
+  
